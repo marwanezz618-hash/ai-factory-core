@@ -1,0 +1,17 @@
+```yaml
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: ai-factory-db
+    environment:
+      POSTGRES_USER: aifactory
+      POSTGRES_PASSWORD: aifactory123
+      POSTGRES_DB: aifactory
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
