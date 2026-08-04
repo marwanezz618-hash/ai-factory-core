@@ -1,9 +1,10 @@
-```yaml
 version: '3.8'
+
 services:
   postgres:
     image: postgres:15-alpine
     container_name: ai-factory-db
+    restart: always
     environment:
       POSTGRES_USER: aifactory
       POSTGRES_PASSWORD: aifactory123
